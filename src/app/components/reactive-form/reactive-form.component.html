@@ -1,0 +1,50 @@
+<div class="container">
+    <form [formGroup]="formularioContacto" (ngSubmit)="onSubmit()" class="row g-3">
+      <h3>Iniciar Sesion</h3>
+      <div class="col-md-6">
+        <label for="inputName" class="form-label">Nombre</label>
+        <input 
+        formControlName="nombre" 
+        type="text" 
+        class="form-control" 
+        [class.is-valid]="nameControl?.valid"
+        id="inputName">
+      </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Correo Electronico</label>
+          <input 
+          formControlName="email" 
+          type="email" 
+          class="form-control" 
+          [class.is-valid]="emailControl?.valid"
+          id="inputEmail4">
+        </div>
+        <div class="col-12">
+          <label for="inputPassword4" class="form-label">Contraseña</label>
+          <input 
+          formControlName="contraseña" 
+          type="password" 
+          class="form-control" 
+          [class.is-valid]="passControl?.valid"
+          id="inputPassword4"
+          placeholder="Minimo de 6 caracteres">
+        </div>
+        <div class="col-md-12">
+          <label for="inputAddress" class="form-label">Direccion</label>
+          <input formControlName="address"  type="text" class="form-control" id="inputAddress" placeholder="Opcional">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Recuerdame
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <button class="form-submit-button" type="submit">Iniciar Sesion</button>
+        </div>
+    </form>
+</div>
+
+<pre>{{ formularioContacto.status }}</pre>

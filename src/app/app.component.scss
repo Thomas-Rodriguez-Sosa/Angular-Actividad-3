@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.mainC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    
+}
